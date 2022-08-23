@@ -1,0 +1,30 @@
+
+    <div class="text-center">
+        
+        <h1 class="titulo"><img src="../assets/images/logomarvel.png" width="250" height="80" alt=""> {{title}}</h1>
+    
+    </div>
+    
+
+    <div class="row row-cols-1 row-cols-md-4">
+        <div class="col mb-4" *ngFor="let comic of comics |async">
+          <div class="card h-100 bg-dark text-white text-center p-3" >
+            <img src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}" class="card-img-top" alt="{{comic.name}}">
+            <div class="card-body">
+                <h5 class="card-title">{{comic.title}}</h5>
+                 
+                <!-- <a href="{{character.urls[0].url}}" target="_blank" class="btn btn-outline-primary btn-block">Details</a> -->
+
+                <button (click)="getComics(comic.id)" class="btn btn-outline-primary btn-block">Details</button>
+
+              
+            </div>
+          </div>
+        </div>
+    </div>    
+    
+    
+    
+    
+
+

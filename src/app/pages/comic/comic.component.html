@@ -1,0 +1,25 @@
+<div class="text-center">
+        
+    <h1 class="titulo"><img src="../assets/images/logomarvel.png" width="250" height="80" alt=""> {{title}}: <small>{{comic.title}}</small></h1>
+
+</div>
+
+
+    <div class="row">
+        <div class="col-sm-6">
+            <img src="{{comic.thumbnailPath}}.{{comic.thumbnailExtension}}" alt="..." class="img-thumbnail">
+        </div>
+        <div class="col-sm-6">
+
+            <p><strong>DESCRIPTION:</strong> {{comicDesc}}</p>
+            
+            <a href="{{comic.urls}}" target="_blank" class="btn btn-outline-danger btn-block">More Details</a><br>
+
+            <a routerLink="/comics" class="float-right">-Return-</a>
+
+
+        </div>
+    </div>
+
+
+
